@@ -6,10 +6,10 @@ Documenting a case where "Polars" fails to join two tables when the tables are b
 
 We are trying to join two parquet tables and get the results. The two tables:
 
-| Table name | Parquet files | Number of records | Size on disk (compressed) |
-|------------|---------------|-------------------|--------------|
-| branded_food | ./data/parquet/branded_food.parquet | 1,958,978 | ~323MB|
-| food_nutrient | ./data/parquet/food_nutrient.parquet | 27,800,079 | ~225MB|
+| Table name | Parquet files | Number of records | Size on disk (compressed) | Pandas dataframe in memory |
+|------------|---------------|-------------------|--------------|------------------------------|
+| branded_food | ./data/parquet/branded_food.parquet | 1,958,978 | ~225 MB| ~313 MB| 
+| food_nutrient | ./data/parquet/food_nutrient.parquet | 27,800,079 | ~324 MB| ~2891 MB|
 
 
 ## Issue
