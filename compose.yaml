@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  polars_test_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    deploy:
+        resources:
+          limits:
+            memory: 10G
+          
