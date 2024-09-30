@@ -10,8 +10,8 @@ import polars as pl
 
 def run_polars_test():
     # Setup the tables with the lazy loading option
-    bf = pl.read_parquet("./data/parquet/branded_food.parquet/*.parquet").lazy()
-    fn = pl.read_parquet("./data/parquet/food_nutrient.parquet/*.parquet").lazy()
+    bf = pl.read_parquet("./data/parquet/branded_food.parquet/*.parquet", low_memory=True).lazy()
+    fn = pl.read_parquet("./data/parquet/food_nutrient.parquet/*.parquet", low_memory=True).lazy()
 
     ctx = pl.SQLContext()
     ctx.register("branded_food", bf)
